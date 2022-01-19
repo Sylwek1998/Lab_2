@@ -16,7 +16,7 @@ public class Main {
 
             }
         }
-        //zad.1
+        //zad.2
 
         int[] tab = new int[5];
         for (int i = 0; i < tab.length; i++) {
@@ -24,8 +24,11 @@ public class Main {
             System.out.print("Podaj liczbę: ");
 
             tab[i] = scan.nextInt() ;
-            //int liczba = scan.nextInt();
+
         }
 
+        for (int i : tab  ) {
+            System.out.println(i+11);
+        }
     }
 }

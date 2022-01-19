@@ -25,7 +25,7 @@ public class Main {
         tab[3] = 4;
         tab[4] = 5;
         System.out.println(tab.length);
-        int i = 0;
+         i = 0;
         while (i < tab.length) {
             System.out.println("tab[" + i + "]: " + tab[i]);
             i++;
@@ -54,8 +54,10 @@ public class Main {
             System.out.println("michal");
         }
         //b
-        while(false){
+      /*  while(false){
             System.out.println("michal");
         }
+
+       */
     }
 }

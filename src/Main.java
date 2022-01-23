@@ -1,26 +1,29 @@
-import java.util.Scanner;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
+
     public static void main(String[] args) {
 
-        //zad.1
-        for (int i = 0; i <= 134; i++) {
-            if (i == 45)
-                break;
-            System.out.print(i + " ");
-        }
-        System.out.print("\n");
-        for (int i = 0; i <= 142; i++) {
-            if (i % 4 == 0)
-                continue;
-            System.out.print(i + " ");
-        }
-        System.out.print("\n");
-        for (int i = 6; i <= 99; i++) {
-            if (i == 69)
-                return;
-            System.out.print(i + " ");
+        int[] tablica = new int[20];
 
+        uzupelnijTablice(tablica);
+        wypiszOtrzymaneWartosci(tablica);
+
+    }
+
+    public static void uzupelnijTablice(int[] tablicaDoUzupelnienia){
+        int idx = 0;
+        for(int i = 40; i>20; i--){
+            tablicaDoUzupelnienia[idx++] = i;
         }
     }
+
+    public static void wypiszOtrzymaneWartosci(int[] tablicaDoWypisania){
+        for(int i : tablicaDoWypisania){
+            System.out.printf("%d ", i);
+        }
+    }
+
 }

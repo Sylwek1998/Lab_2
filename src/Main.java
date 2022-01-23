@@ -6,46 +6,31 @@ public class Main {
     public static void main(String[] args) {
 
         //a
-        List<String> mojaLista = new ArrayList<>();
-        uzupelnij(mojaLista);
+        Set<Integer> mojSet = new HashSet<>();
+        uzupelnij(mojSet);
+        System.out.println(mojSet.toString());
         //b
-        wyswietl(mojaLista);
-        //c
-        mojaLista.remove(mojaLista.size() - 1);
-        mojaLista.remove(mojaLista.size() - 2);
-        mojaLista.add("Karol");
-        mojaLista.add("Karol1");
-        mojaLista.add("Karol2");
-        mojaLista.add("Karol3");
+        wyswietl(mojSet);
 
-        wyswietl(mojaLista);
-
-        //d
-        mojaLista.sort(Comparator.naturalOrder());
-        wyswietl(mojaLista);
-        mojaLista.sort(Comparator.reverseOrder());
-        wyswietl(mojaLista);
     }
 
-    public static void uzupelnij(List nazwaListy) {
+    public static void uzupelnij(Set inSet) {
         Scanner scan = new Scanner(System.in);
-        for (int i = 0; i < 6; i++) {
-            System.out.print("Podaj nazwę zwierzęcia " + i + ": ");
-            nazwaListy.add(scan.nextLine());
+        for (int i = 0; i < 10; i++) {
+            System.out.print("Podaj liczbe " + i + ": ");
+            inSet.add(scan.nextInt());
         }
     }
 
-    public static void wyswietl(List<String> nazwaListy) {
+    public static void wyswietl(Set<Integer> inSet) {
 
-        System.out.println("Rozmiar listy: " + nazwaListy.size());
+        System.out.println("Rozmiar set-a: " + inSet.size());
 
-        for (String nazwa : nazwaListy) {
-            System.out.printf("%s ", nazwa);
+        for (Integer i : inSet) {
+            System.out.printf("%d ", i);
         }
 
         System.out.println();
     }
 
-
 }
-

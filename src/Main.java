@@ -1,28 +1,30 @@
 
-import java.util.ArrayList;
-import java.util.List;
-//ss
+
+
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
 
-        int[] tablica = new int[20];
+        String[] tablica = new String[6];
 
         uzupelnijTablice(tablica);
         wypiszOtrzymaneWartosci(tablica);
 
     }
 
-    public static void uzupelnijTablice(int[] tablicaDoUzupelnienia){
-        int idx = 0;
-        for(int i = 40; i>20; i--){
-            tablicaDoUzupelnienia[idx++] = i;
+    public static void uzupelnijTablice(String[] tablicaDoUzupelnienia){
+        Scanner scan= new Scanner(System.in);
+        for(int i = 0; i< tablicaDoUzupelnienia.length; i++){
+            System.out.print("Podaj tekst("+ i + "): ");
+            tablicaDoUzupelnienia[i] =  scan.nextLine();
         }
     }
 
-    public static void wypiszOtrzymaneWartosci(int[] tablicaDoWypisania){
-        for(int i : tablicaDoWypisania){
-            System.out.printf("%d ", i);
+    public static void wypiszOtrzymaneWartosci(String[] tablicaDoWypisania){
+        for(int i = tablicaDoWypisania.length -1; i >=0; i--){
+            System.out.printf("%s ", tablicaDoWypisania[i]);
         }
     }
 

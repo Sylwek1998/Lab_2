@@ -7,25 +7,24 @@ public class Main {
 
     public static void main(String[] args) {
 
-        String[] tablica = new String[6];
-
-        uzupelnijTablice(tablica);
-        wypiszOtrzymaneWartosci(tablica);
+        wypisz("Michal");
+        System.out.println();
+        wypisz("Michal", "Sylwestrzak");
+        System.out.println();
+        wypisz("Michal", "Sylwestrzak", 23);
+        System.out.println();
 
     }
 
-    public static void uzupelnijTablice(String[] tablicaDoUzupelnienia){
-        Scanner scan= new Scanner(System.in);
-        for(int i = 0; i< tablicaDoUzupelnienia.length; i++){
-            System.out.print("Podaj tekst("+ i + "): ");
-            tablicaDoUzupelnienia[i] =  scan.nextLine();
-        }
+    public static void wypisz(String imie){
+        System.out.printf("%s", imie);
     }
 
-    public static void wypiszOtrzymaneWartosci(String[] tablicaDoWypisania){
-        for(int i = tablicaDoWypisania.length -1; i >=0; i--){
-            System.out.printf("%s ", tablicaDoWypisania[i]);
-        }
+    public static void wypisz(String imie, String nazwisko){
+        System.out.printf("%s %s", imie, nazwisko);
     }
 
+    public static void wypisz(String imie, String nazwisko, int wiek){
+        System.out.printf("%s %s %d", imie, nazwisko, wiek);
+    }
 }
